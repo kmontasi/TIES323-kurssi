@@ -117,7 +117,7 @@ def run_test_server(host="127.0.0.1", port=2121):
     s.listen(5)
     print(f"Testi-FTP kuuntelee: {host}:{port}")
 
-    files = {"welcome.txt": b"Tervetuloa FTP-palvelimelle!\nTama tiedosto vahvistaa RETR-toiminnon."}
+    files = {"welcome.txt": b"Tervetuloa TIES323 FTP testipalvelimelle!\nTama tiedosto vahvistaa RETR-toiminnon.\n"}
 
     def client_thread(conn):
         conn.sendall(b"220 FTP valmiina\r\n")
