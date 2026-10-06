@@ -27,6 +27,7 @@ class SmtpServer:
         recipients = []
         in_data = False
         body_lines = []
+        buffer = ""
 
         while True:
             try:
@@ -36,20 +37,22 @@ class SmtpServer:
             except Exception:
                 break
 
-            text = data.decode("utf-8", errors="ignore")
+            buffer += data.decode("utf-8", errors="ignore")
+            while "\n" in buffer:
+                line, buffer = buffer.split("\n", 1)
+                line = line.strip("\r")
 
-            if in_data:
-                body_lines.append(text)
-                full = "".join(body_lines)
-                if "\r\n.\r\n" in full or "\n.\n" in full:
-                    clean_body = full.replace("\r\n.\r\n", "").replace("\n.\n", "")
-                    self.inbox.add(sender, recipients, clean_body)
-                    conn.sendall(b"250 OK: viesti tallennettu\r\n")
-                    in_data = False
-                    body_lines = []
-                continue
+                if in_data:
+                    if line == ".":
+                        clean_body = "\r\n".join(body_lines)
+                        self.inbox.add(sender, recipients, clean_body)
+                        conn.sendall(b"250 OK: viesti tallennettu\r\n")
+                        in_data = False
+                        body_lines = []
+                    else:
+                        body_lines.append(line)
+                    continue
 
-            for line in text.split("\r\n"):
                 line = line.strip()
                 if not line:
                     continue
