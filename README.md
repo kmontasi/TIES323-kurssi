@@ -2,6 +2,8 @@
 
 Vastaukset ja ratkaisut kurssin **TIES323 Sovellusprotokollat** harjoitustehtäviin (yhteensä 100 pistettä toteutuksista). Tuntikirjanpito löytyy tiedostosta `tuntikirjanpito.md`.
 
+Yliopiston vaatima tekoälysiclaimer. Tehtävän toteutukseen, debuggaugseen, testien ja dokumentaation luontiin on käytetty tekoälyä. Tekoälynä toimii Google Gemini 3.8 Flash.
+
 - **Tekijä:** Khondker Montasirzzaman
 - **Kieli ja ympäristö:** Python 3 (standardikirjaston matalan tason socketit)
 
