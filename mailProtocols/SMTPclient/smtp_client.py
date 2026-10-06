@@ -27,8 +27,14 @@ def send_mail(sender, recipient, subject, body, host="127.0.0.1", port=2525):
     print("Viesti lahetetty.")
 
 if __name__ == "__main__":
-    sender = sys.argv[1] if len(sys.argv) > 1 else "student@ties323.local"
-    rcpt = sys.argv[2] if len(sys.argv) > 2 else "teacher@ties323.local"
-    subj = sys.argv[3] if len(sys.argv) > 3 else "TIES323 Testi"
-    body = sys.argv[4] if len(sys.argv) > 4 else "Tama on testiviesti SMTP asiakkaalta."
+    if len(sys.argv) == 2:
+        sender = "student@ties323.local"
+        rcpt = "teacher@ties323.local"
+        subj = "Tervehdys"
+        body = sys.argv[1]
+    else:
+        sender = sys.argv[1] if len(sys.argv) > 1 else "student@ties323.local"
+        rcpt = sys.argv[2] if len(sys.argv) > 2 else "teacher@ties323.local"
+        subj = sys.argv[3] if len(sys.argv) > 3 else "TIES323 Testi"
+        body = sys.argv[4] if len(sys.argv) > 4 else "Tama on testiviesti SMTP asiakkaalta."
     send_mail(sender, rcpt, subj, body)
