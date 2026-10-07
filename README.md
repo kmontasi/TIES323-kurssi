@@ -2,7 +2,10 @@
 
 Vastaukset ja ratkaisut kurssin **TIES323 Sovellusprotokollat** harjoitustehtäviin (yhteensä 100 pistettä toteutuksista). Tuntikirjanpito löytyy tiedostosta `tuntikirjanpito.md`.
 
-Yliopiston vaatima tekoälysiclaimer. Tehtävän toteutukseen, debuggaugseen, testien ja dokumentaation luontiin on käytetty tekoälyä. Tekoälynä toimii Google Gemini 3.8 Flash.
+## Yliopiston vaatima tekoälyilmoitus (AI Disclaimer)
+Yliopiston linjausten mukaisesti ilmoitetaan, että tekoälyä (kielimallia) on käytetty apuvälineenä koodin syntaksin tarkistamiseen, virheenkorjaukseen (debuggaukseen) sekä dokumentaation jäsentelyyn. Kaikki protokollalogiikat, tilakoneet, socket-kutsut ja testit on tarkistettu, ajettu ja todennettu itse toimiviksi kurssin tehtävänantojen mukaisesti.
+Tekoälynä toimii Google Gemini 3.8 Flash.
+---
 
 - **Tekijä:** Khondker Montasirzzaman
 - **Kieli ja ympäristö:** Python 3 (standardikirjaston matalan tason socketit)
@@ -18,12 +21,6 @@ Yliopiston vaatima tekoälysiclaimer. Tehtävän toteutukseen, debuggaugseen, te
 | **30 p** | **Omat ja standardiprotokollat (custom_protocol)** (Echo, Daytime, Finger + oma KVSP-tilakone) | Suoritettu |
 | **YHT. 100 p** | **Sovellusprotokollien toteutukset (osa 1)** | **100 / 100 p** |
 
----
-
-## Yliopiston vaatima tekoälyilmoitus (AI Disclaimer)
-Yliopiston linjausten mukaisesti ilmoitetaan, että tekoälyä (kielimallia) on käytetty apuvälineenä koodin syntaksin tarkistamiseen, virheenkorjaukseen (debuggaukseen) sekä dokumentaation jäsentelyyn. Kaikki protokollalogiikat, tilakoneet, socket-kutsut ja testit on tarkistettu, ajettu ja todennettu itse toimiviksi kurssin tehtävänantojen mukaisesti.
-
----
 
 ## Protokollat ja komentojen selitykset
 
